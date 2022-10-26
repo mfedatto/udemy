@@ -12,7 +12,12 @@ module.exports = {
         rules: [
             {
                 test: /\.(png|jpg)$/,
-                type: "asset/resource"
+                type: "asset/resource",
+                parser: {
+                    dataUrlCondition: {
+                        maxSize:3 * 1024
+                    }
+                }
             }
         ]
     }
